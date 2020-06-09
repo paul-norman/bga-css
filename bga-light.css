@@ -1,0 +1,1010 @@
+/* Far easier to think this way... */
+* {
+	box-sizing: border-box;
+}
+/* Remove the wooden background */
+html {
+	background: #f1f1f1;
+}
+/* Fix the top bar in the desktop version too */
+#topbar {
+	position: fixed;
+	top: 0;
+	z-index: 100;
+	background: #fff;
+	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+}
+body {
+	padding-top: 43px;
+}
+body.game_interface {
+	padding-top: 62px;
+}
+.mobile_version #overall-content {
+    padding-top: 0;
+}
+/* Make the mobile menu a little neater */
+#mobile-menu {
+	right: 1.5%;
+	border: 1px solid #dbdbdb;
+	background: white;
+	border-radius: 0;
+	box-shadow: 0 4px 3px -3px rgba(0, 0, 0, 0.5);
+}
+.mobile-menu-item {
+	border-bottom: 1px solid #dbdbdb;
+}
+.mobile-menu-item:last-child {
+	border-bottom: 0;
+}
+.notouch-device .mobile-menu-item:hover {
+	background-color: #f1f1f1;
+	color: #000 !important;
+}
+/* Make the avatar pictures slightly neater */
+.emblem {
+	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+	background-color: #6a6a6a;
+}
+.notouch-device .default_avatar:hover {
+	filter: none !important;
+}
+.mobile_version #friends_icon {
+	right: 10px;
+}
+/* Make the separators a neutral grey */
+.post,
+.bga_separator,
+.board_fake_input {
+	border-color: #dbdbdb;
+}
+/* When invited to a table, make it more obvious! */
+#expected_table_banners {
+	position: fixed;
+	top: 50px;
+	width: 99%;
+	z-index: 100;
+}
+#expected_table_banners .bgabutton_gray {
+	background-color: #f1f1f1;
+}
+#expected_table_banners .bgabutton_gray:hover {
+	background-color: #fff;
+}
+#expected_table_banners .expected_banner,
+#current_table_banner {
+	color: #155724;
+	background-color: #d4edda;
+	border-color: #c3e6cb;
+}
+/* Critical Alerts */
+#confirmEmail,
+#invalidEmail,
+.warning_portlet,
+#overall__warning_message,
+#mainsite_translation_warning,
+#server_status_warning_message,
+#no_css_message,
+#connect_status_wrapper,
+#browser_warning_wrapper,
+#globalerrormsg,
+.head_error {
+	color: #721c24;
+	background-color: #f8d7da;
+	border-color: #f5c6cb;
+}
+/* Warnings */
+.head_info,
+#connect_status_wrapper {
+	color: #856404;
+	background-color: #fff3cd;
+	border-color: #ffeeba;
+}
+#connect_status_wrapper > div {
+	border: 1px solid #dbc88e;
+	background-color: #fff3cd !important;
+}
+/* General styles for the page sections */
+.pagesection,
+.portlet,
+.tips {
+	background-color: #fff;
+	box-shadow: none;
+	border-radius: 6px;
+	border: 1px solid #dbdbdb;
+}
+.pagesection h3,
+.portlet h3,
+.pagesection h2,
+.portlet h2 {
+	background: #eaf0f8;
+	border-radius: 6px 6px 0 0;
+	box-shadow: none;
+	border-bottom: 1px solid #dbdbdb;
+}
+/* Input styles */
+select, 
+textarea, 
+input[type=text], 
+input[type=color], 
+input[type=date], 
+input[type=time], 
+input[type=datetime-local], 
+input[type=month], 
+input[type=week], 
+input[type=number], 
+input[type=range], 
+input[type=url], 
+input[type=search], 
+input[type=email], 
+input[type=tel], 
+input[type=password],
+.dijitInputField {
+	border: 1px solid #dbdbdb !important;
+	margin: 0 !important;
+	padding: 7px 10px !important;
+	font-size: 16px !important;
+	background: #fff !important;
+	width: 100%;
+	text-align: left !important;
+}
+textarea:focus, 
+select:focus,
+input[type=text]:focus, 
+input[type=color]:focus, 
+input[type=date]:focus, 
+input[type=time]:focus, 
+input[type=datetime-local]:focus, 
+input[type=month]:focus, 
+input[type=week]:focus, 
+input[type=number]:focus, 
+input[type=range]:focus, 
+input[type=url]:focus, 
+input[type=search]:focus, 
+input[type=email]:focus, 
+input[type=tel]:focus, 
+input[type=password]:focus {
+	border: 1px solid #385088 !important;
+}
+select {
+	padding: 6px 10px !important;
+}
+.bga_big_input {
+	border: 1px solid #dbdbdb;
+	margin: 0;
+}
+.row-data-form .third_width {
+    width: 81px !important;
+}
+.dijitSelect {
+	border: 0 !important;
+}
+.dijitSelect .dijitButtonContents {
+	border: 0 !important;
+	background: transparent !important;
+}
+.dijitSelect .dijitArrowButton {
+	width: 15px;
+	padding: 0;
+	border: 1px solid #dbdbdb !important;
+	border-left: 0 !important;
+}
+.dijitSelect .dijitInputField.dijitArrowButtonInner {
+	width: 7px;
+	background: url('https://x.boardgamearena.net/data/themereleases/current/js/dojoroot/dijit/themes/tundra/images/spriteArrows.png') no-repeat scroll 0 center !important;
+	border: 0 !important;
+	padding: 7px 0 !important;
+}
+.dijitSelect:hover .dijitArrowButton {
+	border-color: #385088 !important;
+	color: #000 !important;
+}
+.dijitInputField:hover, 
+.dijitSelect:hover .dijitInputField {
+	border-color: #385088 !important;
+}
+/* Pageheader menus */
+.pageheader {
+	background-color: #fff !important;
+}
+.pageheader_menu {
+	border-color: #dbdbdb;
+}
+.desktop_version .pageheader_menu {
+	display: flex;
+	width: 100%;
+}
+.desktop_version .pageheader_menu > div {
+	position: relative;
+	flex: 1;
+	float: none;
+	width: auto;
+	height: auto;
+	display: block;
+	margin: 0;
+	padding: 0 2px 10px 2px;
+	text-align: center;
+}
+.desktop_version .pageheader_menu > div > div.pageheader_menuitembar {
+	display: none !important;
+}
+.pageheader_menu > div:hover,
+.pageheader_menu > div.pageheader_menuitemselected {
+	color: #385088 !important;
+}
+.desktop_version .pageheader_menu > div:hover::after,
+.desktop_version .pageheader_menu > div.pageheader_menuitemselected::after {
+	position: absolute;
+	content: ' ';
+	background-color: #385088;
+	height: 6px;
+	border-radius: 6px 6px 0px 0px;
+	bottom: 0;
+	left: 2px;
+	right: 2px;
+	font-size: 0;
+}
+.desktop_version .pageheader_menu > #pageheader_prestige:hover .xp_container,
+.desktop_version .pageheader_menu > #pageheader_prestige.pageheader_menuitemselected .xp_container {
+	margin: 0 !important;
+}
+/* Not breaking these can cause very wide, but hidden sections */
+pre {
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+/* Broken with `border-box` sizing */
+.xp_container {
+	height: 28px;
+}
+/* Mostly gets in the way */
+.roundedbox * {
+	background-color: transparent !important;
+}
+/* What was this??? Make notes as you go along, kids... */
+.freeplace_slot {
+	height: 60px;
+}
+/* Elements that serve no good purpose but to clutter the interface and distract users */
+#gamecategory_wrap_suggest,
+.newsblock,
+#pagesection_rankings,
+#welcomefacebook,
+#welcomemostwanted,
+#goodies,
+#goodies + div,
+#goodies + div + div,
+#fb-root,
+#connected_player_menu {
+	display: none !important;
+}
+/* LOBBY PAGE */
+.desktop_version #gamelobby-module .pageheader_menu {
+	display: block;
+}
+.desktop_version #gamelobby-module .pageheader_menu > div {
+	padding: 0;
+}
+.desktop_version .switcher_zone .fa-caret-down {
+	left: 0;
+}
+.desktop_version #gamelobby-module .pageheader_menu > div:hover::after,
+.desktop_version #gamelobby-module .pageheader_menu > div.pageheader_menuitemselected::after {
+	display: none;
+}
+.pageheader_menu_verylarge .pageheader_big_switch {
+	box-shadow: none;
+	border: 1px solid #dbdbdb;
+	color: #385088;
+}
+.desktop_version #lobby_invite_friend_zone {
+	padding: 0 0 10px 0 !important;
+}
+.game_box_wrap {
+	width: 17%;
+	margin: 0 1% 3%;
+}
+.wannaplay_item {
+	float: none;
+	margin: 0;
+}
+.wannaplayauto_item {
+	position: static;
+	width: 100%;
+	height: 100%;
+}
+.expandedgame_box_wrap {
+	width: 100%;
+}
+.expandedgame_box_wrap .wannaplay_item {
+	float: left;
+	margin-right: 25px;
+	margin-bottom: 10px;
+}
+.expandedgame_box_wrap .wannaplayauto_item {
+	position: absolute;
+	top: 0 !important;
+	left: 0 !important;
+	width: 235px;
+}
+/* Fix the expanding button */
+.tabbed_slider_bar {
+	bottom: -29px;
+}
+.pagesection .tabbed_slider_bar {
+	bottom: -27px;
+}
+.tabbed_slider_bar:hover {
+	bottom: -28px;
+}
+.pagesection .tabbed_slider_bar:hover {
+	bottom: -26px;
+}
+.tabbed_slider_bar_barcenter {
+	background-color: #fff !important;
+}
+.tabbed_slider_bar_left,
+.tabbed_slider_bar_right {
+	border-top: 28px solid #fff !important;
+}
+/* NEWS PAGE */
+#headlines-module .col-md-9 {
+	width: 100%;
+	margin: 0;
+	padding: 10px;
+}
+#headlines-module .col-md-3 {
+	display: none;
+}
+.newsabstract img.bga_lazyload {
+	margin-right: 0;
+	max-height: auto;
+	width: 100%;
+}
+/* GAME LIST PAGE */
+.desktop_version #gamelistpageheader .col-md-2 {
+	width: 20%;
+	margin: 0;
+	padding-right: 5px;
+}
+#gamelistpageheader .row-data {
+	font-size: 0;
+}
+#gamelistpageheader .row-data > div {
+	font-size: 14px;
+}
+#col_filter_more_filter > div {
+	margin-top: 26px !important;
+}
+.mobile_version #col_filter_more_filter > div {
+	margin-top: 0 !important;
+}
+#gamelist_gameselect_popup {
+	background-color: #fff;
+	border: 1px solid #dbdbdb;
+}
+#gamelist-module .dijitTextBox,
+#gamelist-module .dijitInputField {
+	background: transparent !important;
+	border: 0 !important;
+	width: 100% !important;
+	padding: 0 !important;
+}
+.game_category_wrap .gamelist_item {
+	width: 216px;
+}
+.gamelist_itemrow {
+	height: 238px;
+}
+.game_category_wrap {
+	width: 100%;
+}
+/* COMMUNITY PAGE */
+#community-module .subtitle {
+	position: static;
+	top: auto;
+	bottom: auto;
+}
+#community-module #widget_findplayer, 
+#community-module #widget_findgroup {
+	background: transparent;
+	padding-top: 40px;
+	border: 0;
+	margin: 0;
+}
+#community-module #widget_findfriend {
+	background: transparent;
+	border: 0;
+	margin: 0;
+}
+#community-module #widget_findplayer .dijitInputContainer, 
+#community-module #widget_findgroup .dijitInputContainer, 
+#community-module #widget_findfriend .dijitInputContainer{
+	border: 0 !important;
+	padding: 0 !important;
+}
+#community-module #widget_findfriend .dijitValidationContainer {
+	display: none;
+}
+#community-module #widget_findgroup {
+	padding-top: 50px;
+	position: relative;
+}
+#community-module #widget_findgroup ~ p {
+	margin: 0 !important;
+	position: absolute;
+	top: 90px;
+	left: 150px
+}
+#community-module .controlpanelmenu .subtitle {
+	margin: 10px 10px 0 120px;
+	width: auto;
+}
+#findplayer_popup, 
+#findgroup_popup, 
+#findfriend_popup {
+	background-color: #fff;
+	border: 1px solid #dbdbdb;
+}
+/* GAMES IN PROGRESS */
+#gameinprogress-module .dijitTextBox,
+#gameinprogress-module .dijitInputField {
+	background: transparent !important;
+	border: 0 !important;
+	width: 100% !important;
+	padding: 0 !important;
+}
+/* PREFERENCES PAGE */
+#langchoice, 
+#spokenlanguages {
+	width: 200px;
+}
+.extended_message_hidden::after {
+	background: #fff;
+}
+/* TABLE PAGE */
+#table-module .dijitTextBox,
+#table-module .dijitInputField {
+	background: transparent !important;
+	border: 0 !important;
+	width: 100% !important;
+	padding: 0 !important;
+}
+/* GAME PLAY PAGE */
+#page-title {
+	box-shadow: 0 4px 3px -3px rgba(0, 0, 0, 0.5);
+	border: 1px solid #dbdbdb !important;
+}
+/* Make it very obvious when it's your turn... */
+.current_player_is_active #page-title {
+	background: #bfe8f7 !important;
+	border: 4px solid #a363ce !important;
+	padding: 0;
+	border-radius: 4px;
+}
+.current_player_is_active #page-title > div {
+	border: 4px solid #6599e2 !important;
+}
+.current_player_is_active #page-title > div > div {
+	border: 4px solid #61c2e4 !important;
+	padding: 5px;
+}
+/* DOESN'T WORK BECAUSE SYSTEM SMUSHES IT!
+.current_player_is_active #page-title {
+	background-image: repeating-linear-gradient(to right,
+		#c4e17f 0px, #c4e17f 50px,
+		#f7fdca 50px, #f7fdca 100px,
+		#fad071 100px, #fad071 150px,
+		#f0766b 150px, #f0766b 200px,
+		#db9dbe 200px, #db9dbe 250px,
+		#c49cdf 250px, #c49cdf 300px,
+		#6599e2 300px, #6599e2 350px,
+		#61c2e4 350px, #61c2e4 400px);
+	background-size: 100% 100%;
+	background-repeat: repeat-x;
+	border: 0 !important;
+	border-radius: 5px;
+	padding: 5px;
+}
+.current_player_is_active #page-title > div {
+	background: #fff;
+	padding: 5px;
+}
+*/
+#page-title .bgabutton {
+	background-color: #fff !important;
+}
+#page-title .bgabutton:hover {
+	background-color: #f0f0f0 !important;
+}
+#page-title .bgabutton_gray:hover {
+	background-color: #f0f0f0 !important;
+}
+#page-title .bgabutton_gray:active {
+	background: #d8d8d8 !important;
+}
+#page-title .bgabutton_blue:hover {
+	background: #6785b7 !important;
+}
+#page-title .bgabutton_red:hover {
+	background: #ce4c4c !important;
+}
+/* Tame the L/R menu */
+#leftright_page_wrapper {
+	display: flex;
+	width: 100%;
+}
+#left-side-wrapper {
+	float: none;
+	flex: 1;
+	width: auto;
+	margin: 5px 0 0;
+}
+#left-side {
+	margin: 0;
+	padding: 5px;
+}
+#right-side {
+	float: none;
+	width: auto;
+	flex: 0 0 245px;
+	margin: 0;
+	padding: 5px 0 5px 5px;
+}
+.mobile_version #right-side {
+	top: 0;
+}
+/* Fit the end of game stats in with the theme */
+#player_stats_table th {
+	background: #eaf0f8;
+	color: #385088;
+}
+/* Game side logs */
+#seemorelogs {
+	background: transparent;
+}
+#seemorelogs > a {
+	background: #f1f1f1;
+	top: auto;
+	bottom: 0;
+	height: 30px;
+}
+#seemorelogs > a::before, 
+#seemorelogs > a::after {
+	content: '▼';
+	position: absolute;
+	top: 10px;
+	left: 45px;
+	color: red;
+	width: 10px;
+	height: 14px;
+}
+#seemorelogs > a::after {
+	left: auto;
+	right: 50px;
+}
+#seemorelogs > a:hover::before, 
+#seemorelogs > a:hover::after {
+	color: blue;
+}
+/* PLAYER BOARDS */
+.current-player-board {
+	background-color: #fff !important;
+}
+.player-board {
+	border: 0 !important;
+	padding: 0;
+	background: transparent;
+	box-shadow: none;
+	width: auto !important;
+}
+.player-board.active {
+	border: 0 !important;
+}
+.player_board_inner {
+	padding: 5px 3px;
+	border: 1px solid #7b7b7b;
+	background-color: #efefef;
+	border-radius: 8px 0px 0px 8px;
+	box-shadow: 0 4px 3px -3px rgba(0, 0, 0, 0.5);
+	color: #222 !important;
+}
+.player_board_inner .player_score, 
+.player_board_inner .player-name {
+	background-color: transparent !important;
+}
+#player_boards .player_status {
+    right: 24px;
+}
+.player-board .flag {
+	right: 4px;
+}
+
+/* 
+**DEFAULT COLOURS**: ffffff, 7b7b7b, ff0000, f07f16, ffa500, bdd002, 008000, 72c3b1, 0000ff, 982fff, e94190 
+**SUPPORTED**: 6 Nimmt, 7 Wonders, Potion Explosion, Stone Age, Rallyman GT, Kingdomino, Terra Mystica, Hanabi, Sushi Go!, Puerto Rico, Seasons, Takenoko, Jaipur, Incan Gold, The King's Guild, Race for the Galaxy, Roll for the Galaxy, Through the Ages, Red7, Tzolk'in, Tobago, For Sale, Tash-Kalar, Coup, Tokaido, Saboteur, Colt Express, Barbu, Dice Forge, Connect Four, Siam, Logger, Dragonheart, Mammalath, French Tarot, Sapians, La Granga, Caylus, Keyflower, Amyitis, Targi, Clans of Caledonia, Yahtzee, Love Letter, Lost Cities, Tock, Teotihuacan: City of Gods, Backgammon, Bubblee Pop, Lords of Xidit, Elfenland, Assyria, Khronos, Innovation, Lewis & Clark, Taluva, Battle Sheep, Quantum, Russian Railroads, Eminent Domain, Not Alone, Nippon, NXS, Legendary Inventors, GORami, Skat, Palace, Oh Hell!
+**MISSING**: Can't Stop, Carcassonne, Solo
+**UNKOWN**: Celestia
+**CANNOT**: Dark Agent (design), Saint Poker (missing colour), The Werewolves of Miller's Hollow (many colours too similar)
+*/
+
+/* Black */
+.player_board_inner[id$="_000"],
+.player_board_inner[id$="_000000"] {
+	background-color: #f2f2f2;
+	border: 1px solid #000;
+	border-left: 5px solid #000 !important;
+}
+
+/* Off-Black (Dark Blue) */
+.player_board_inner[id$="_262a2b"],
+.player_board_inner[id$="_262A2B"], 
+.player_board_inner[id$="_1a2126"],
+.player_board_inner[id$="_1A2126"], 
+.player_board_inner[id$="_3b3232"],
+.player_board_inner[id$="_3B3232"],
+.player_board_inner[id$="_1b1819"],
+.player_board_inner[id$="_1b1819"] {
+	background-color: #bfbfbf;
+	border: 1px solid #262a2b;
+	border-left: 5px solid #262a2b !important;
+}
+
+/* White */
+.player_board_inner[id$="_fff"],
+.player_board_inner[id$="_FFF"],
+.player_board_inner[id$="_ffffff"],
+.player_board_inner[id$="_FFFFFF"], 
+.player_board_inner[id$="_f0f9ff"],
+.player_board_inner[id$="_F0F9FF"] {
+	background-color: #fff;
+	border: 1px solid #f8f8f8;
+	border-left: 5px solid #f8f8f8 !important;
+}
+.player_board_inner[id$="_fff"] .player-name > a,
+.player_board_inner[id$="_FFF"] .player-name > a,
+.player_board_inner[id$="_ffffff"] .player-name > a,
+.player_board_inner[id$="_FFFFFF"] .player-name > a, 
+.player_board_inner[id$="_f0f9ff"] .player-name > a,
+.player_board_inner[id$="_F0F9FF"] .player-name > a {
+	text-shadow: -1px -1px 0 #666, 1px -1px 0 #666, -1px 1px 0 #666, 1px 1px 0 #666;
+}
+
+/* Light Grey */
+.player_board_inner[id$="_ccc"],
+.player_board_inner[id$="_CCC"],
+.player_board_inner[id$="_cccccc"],
+.player_board_inner[id$="_CCCCCC"] {
+	background-color: #f2f2f2;
+	border: 1px solid #cccccc;
+	border-left: 5px solid #cccccc !important;
+}
+
+/* Mid Grey */
+.player_board_inner[id$="_4a4e51"],
+.player_board_inner[id$="_4A4E51"], 
+.player_board_inner[id$="_839099"] {
+	background-color: #f2f2f2;
+	border: 1px solid #4a4e51;
+	border-left: 5px solid #4a4e51 !important;
+}
+
+/* Dark Grey */
+.player_board_inner[id$="_7b7b7b"],
+.player_board_inner[id$="_7B7B7B"],
+.player_board_inner[id$="_666666"], 
+.player_board_inner[id$="_666"] {
+	background-color: #f2f2f2;
+	border: 1px solid #7b7b7b;
+	border-left: 5px solid #7b7b7b !important;
+}
+
+/* Bright Red */
+.player_board_inner[id$="_ff0000"],
+.player_board_inner[id$="_FF0000"],
+.player_board_inner[id$="_ea3a3c"],
+.player_board_inner[id$="_EA3A3C"], 
+.player_board_inner[id$="_d90505"],
+.player_board_inner[id$="_D90505"] {
+	background-color: #fbd1d1;
+	border: 1px solid #ff0000;
+	border-left: 5px solid #ff0000 !important;
+}
+
+/* Dark Red */
+.player_board_inner[id$="_b01e21"],
+.player_board_inner[id$="_B01E21"], 
+.player_board_inner[id$="_971923"], 
+.player_board_inner[id$="_dc2515"],
+.player_board_inner[id$="_DC2515"], 
+.player_board_inner[id$="_a03239"],
+.player_board_inner[id$="_A03239"], 
+.player_board_inner[id$="_97231c"],
+.player_board_inner[id$="_97231C"] {
+	background-color: #fedbdc;
+	border: 1px solid #b01e21;
+	border-left: 5px solid #b01e21 !important;
+}
+
+/* Brown */
+.player_board_inner[id$="_773300"], 
+.player_board_inner[id$="_70421d"], 
+.player_board_inner[id$="_70421D"], 
+.player_board_inner[id$="_663300"] {
+	background-color: #ffe6d4;
+	border: 1px solid #773300;
+	border-left: 5px solid #773300 !important;
+}
+
+/* Light Brown */
+.player_board_inner[id$="_b98a46"], 
+.player_board_inner[id$="_B98A46"], 
+.player_board_inner[id$="_d6b156"], 
+.player_board_inner[id$="_D6B156"],
+.player_board_inner[id$="_aa7903"], 
+.player_board_inner[id$="_AA7903"] {
+	background-color: #ffe6d4;
+	border: 1px solid #b98a46;
+	border-left: 5px solid #b98a46 !important;
+}
+
+/* Orange */
+.player_board_inner[id$="_f07f16"],
+.player_board_inner[id$="_F07F16"],
+.player_board_inner[id$="_d56f12"],
+.player_board_inner[id$="_D56F12"],
+.player_board_inner[id$="_e26b27"],
+.player_board_inner[id$="_E26B27"], 
+.player_board_inner[id$="_ff8000"],
+.player_board_inner[id$="_ff8000"],
+.player_board_inner[id$="_df8f0b"],
+.player_board_inner[id$="_DF8F0B"], 
+.player_board_inner[id$="_f3a000"],
+.player_board_inner[id$="_F3A000"] {
+	background-color: #fff3cd;
+	border: 1px solid #f07f16;
+	border-left: 5px solid #f07f16 !important;
+}
+
+/* Light Orange */
+.player_board_inner[id$="_ffa500"],
+.player_board_inner[id$="_FFA500"], 
+.player_board_inner[id$="_f0a117"],
+.player_board_inner[id$="_F0A117"], 
+.player_board_inner[id$="_f69822"],
+.player_board_inner[id$="_F69822"], 
+.player_board_inner[id$="_f9ae18"],
+.player_board_inner[id$="_F9AE18"], 
+.player_board_inner[id$="_a76e1f"],
+.player_board_inner[id$="_A76E1F"],
+.player_board_inner[id$="_fdb515"],
+.player_board_inner[id$="_FDB515"] {
+	background-color: #fcebcd;
+	border: 1px solid #ffa500;
+	border-left: 5px solid #ffa500 !important;
+}
+
+/* Dark Yellow */
+.player_board_inner[id$="_cccc00"],
+.player_board_inner[id$="_CCCC00"], 
+.player_board_inner[id$="_bca700"],
+.player_board_inner[id$="_BCA700"] {
+	background-color: #fffdda;
+	border: 1px solid #cccc00;
+	border-left: 5px solid #cccc00 !important;
+}
+
+/* Yellow */
+.player_board_inner[id$="_ffff00"],
+.player_board_inner[id$="_FFFF00"],
+.player_board_inner[id$="_f4eb22"],
+.player_board_inner[id$="_F4EB22"], 
+.player_board_inner[id$="_fffa77"],
+.player_board_inner[id$="_FFFA77"] {
+	background-color: #fffdda;
+	border: 1px solid #f4eb22;
+	border-left: 5px solid #f4eb22 !important;
+}
+.player_board_inner[id$="_ffff00"] .player-name > a,
+.player_board_inner[id$="_FFFF00"] .player-name > a, 
+.player_board_inner[id$="_f4eb22"] .player-name > a,
+.player_board_inner[id$="_F4EB22"] .player-name > a, 
+.player_board_inner[id$="_fffa77"] .player-name > a,
+.player_board_inner[id$="_FFFA77"] .player-name > a {
+	text-shadow: -1px -1px 0 #666, 1px -1px 0 #666, -1px 1px 0 #666, 1px 1px 0 #666;
+}
+
+/* Lurid Green */
+.player_board_inner[id$="_00d27f"], 
+.player_board_inner[id$="_00D27F"] {
+	background-color: #e4fcf3;
+	border: 1px solid #00d27f;
+	border-left: 5px solid #00d27f !important;
+}
+
+/* Light Green */
+.player_board_inner[id$="_bdd002"], 
+.player_board_inner[id$="_BDD002"], 
+.player_board_inner[id$="_8ec459"], 
+.player_board_inner[id$="_8EC459"] {
+	background-color: #fcffe4;
+	border: 1px solid #bdd002;
+	border-left: 5px solid #bdd002 !important;
+}
+
+/* Dark Green */
+.player_board_inner[id$="_008000"], 
+.player_board_inner[id$="_008800"], 
+.player_board_inner[id$="_236734"], 
+.player_board_inner[id$="_54a94a"], 
+.player_board_inner[id$="_54A94A"], 
+.player_board_inner[id$="_278139"], 
+.player_board_inner[id$="_278139"], 
+.player_board_inner[id$="_39552f"], 
+.player_board_inner[id$="_39552F"], 
+.player_board_inner[id$="_4a823a"], 
+.player_board_inner[id$="_4A823A"], 
+.player_board_inner[id$="_009e1d"], 
+.player_board_inner[id$="_009E1D"], 
+.player_board_inner[id$="_007a26"], 
+.player_board_inner[id$="_007A26"], 
+.player_board_inner[id$="_439627"], 
+.player_board_inner[id$="_25b000"], 
+.player_board_inner[id$="_25B000"] {
+	background-color: #eaffea;
+	border: 1px solid #008000;
+	border-left: 5px solid #008000 !important;
+}
+
+/* Light Olive */
+.player_board_inner[id$="_b6b525"],
+.player_board_inner[id$="_B6B525"] {
+	background-color: #ffffda;
+	border: 1px solid #b6b525;
+	border-left: 5px solid #b6b525 !important;
+}
+
+/* Dark Olive */
+.player_board_inner[id$="_666600"] {
+	background-color: #ffffda;
+	border: 1px solid #666600;
+	border-left: 5px solid #666600 !important;
+}
+
+/* Teal */
+.player_board_inner[id$="_2d8775"], 
+.player_board_inner[id$="_2D8775"], 
+.player_board_inner[id$="_41bdbf"], 
+.player_board_inner[id$="_41BDBF"] {
+	background-color: #ddfff8;
+	border: 1px solid #2d8775;
+	border-left: 5px solid #2d8775 !important;
+}
+
+/* Turquoise */
+.player_board_inner[id$="_72c3b1"], 
+.player_board_inner[id$="_72C3B1"] {
+	background-color: #dcfff7;
+	border: 1px solid #72c3b1;
+	border-left: 5px solid #72c3b1 !important;
+}
+
+/* Duck Egg Blue */
+.player_board_inner[id$="_5d8688"], 
+.player_board_inner[id$="_5D8688"] {
+	background-color: #eefeff;
+	border: 1px solid #5d8688;
+	border-left: 5px solid #5d8688 !important;
+}
+
+/* Cyan */
+.player_board_inner[id$="_00ffff"],
+.player_board_inner[id$="_00FFFF"] {
+	background-color: #e3fefe;
+	border: 1px solid #00ffff;
+	border-left: 5px solid #00ffff !important;
+}
+
+/* Light Blue */
+.player_board_inner[id$="_63a9dc"],
+.player_board_inner[id$="_63A9DC"], 
+.player_board_inner[id$="_5f95ac"],
+.player_board_inner[id$="_5F95AC"], 
+.player_board_inner[id$="_6699ff"], 
+.player_board_inner[id$="_6699FF"], 
+.player_board_inner[id$="_6092b6"], 
+.player_board_inner[id$="_6092B6"], 
+.player_board_inner[id$="_5b7eb4"], 
+.player_board_inner[id$="_5B7EB4"], 
+.player_board_inner[id$="_00aedb"], 
+.player_board_inner[id$="_00AEDB"] {
+	background-color: #dcf0ff;
+	border: 1px solid #63a9dc;
+	border-left: 5px solid #63a9dc !important;
+}
+
+/* Bright Blue */
+.player_board_inner[id$="_0000ff"],
+.player_board_inner[id$="_0000FF"], 
+.player_board_inner[id$="_442df0"],
+.player_board_inner[id$="_442DF0"], 
+.player_board_inner[id$="_0011FF"],
+.player_board_inner[id$="_0011ff"], 
+.player_board_inner[id$="_0505d9"], 
+.player_board_inner[id$="_0505D9"],
+.player_board_inner[id$="_23408e"],
+.player_board_inner[id$="_23408E"] {
+	background-color: #e6e6ff;
+	border: 1px solid #0000ff;
+	border-left: 5px solid #0000ff !important;
+}
+
+/* Dark Blue */
+.player_board_inner[id$="_255ba1"],
+.player_board_inner[id$="_255BA1"], 
+.player_board_inner[id$="_27418b"], 
+.player_board_inner[id$="_27418B"], 
+.player_board_inner[id$="_2c5e8e"], 
+.player_board_inner[id$="_2C5E8E"], 
+.player_board_inner[id$="_004fbf"], 
+.player_board_inner[id$="_004FBF"] {
+	background-color: #deecff;
+	border: 1px solid #255ba1;
+	border-left: 5px solid #255ba1 !important;
+}
+
+/* Deep Purple */
+.player_board_inner[id$="_4c3084"],
+.player_board_inner[id$="_4C3084"], 
+.player_board_inner[id$="_6c3161"],
+.player_board_inner[id$="_6C3161"], 
+.player_board_inner[id$="_734c73"],
+.player_board_inner[id$="_734C73"], 
+.player_board_inner[id$="_6d416f"],
+.player_board_inner[id$="_6D416F"] {
+	background-color: #ece3fe;
+	border: 1px solid #4c3084;
+	border-left: 5px solid #4c3084 !important;
+}
+
+/* Bright Purple */
+.player_board_inner[id$="_982fff"],
+.player_board_inner[id$="_982FFF"],
+.player_board_inner[id$="_9900ff"],
+.player_board_inner[id$="_9900FF"], 
+.player_board_inner[id$="_aa00ff"],
+.player_board_inner[id$="_AA00FF"], 
+.player_board_inner[id$="_4c1b5b"],
+.player_board_inner[id$="_4C1B5B"], 
+.player_board_inner[id$="_c800ff"],
+.player_board_inner[id$="_C800FF"] {
+	background-color: #efe0fd;
+	border: 1px solid #982fff;
+	border-left: 5px solid #982fff !important;
+}
+
+/* Bright Pink */
+.player_board_inner[id$="_ff00ff"],
+.player_board_inner[id$="_FF00FF"] {
+	background-color: #fedefe;
+	border: 1px solid #ff00ff;
+	border-left: 5px solid #ff00ff !important;
+}
+
+/* Pink */
+.player_board_inner[id$="_ff1493"],
+.player_board_inner[id$="_FF1493"] {
+	background-color: #fed2ea;
+	border: 1px solid #ff1493;
+	border-left: 5px solid #ff1493 !important;
+}
+
+/* Salmon */
+.player_board_inner[id$="_e94190"],
+.player_board_inner[id$="_E94190"], 
+.player_board_inner[id$="_e15376"],
+.player_board_inner[id$="_E15376"] {
+	background-color: #fdd8ea;
+	border: 1px solid #e94190;
+	border-left: 5px solid #e94190 !important;
+}
