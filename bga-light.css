@@ -13,7 +13,7 @@ GENERAL STYLES
 /* No need to see this if there's whitespace in it! */
 .clear {
 	content: "Ignored, and included for uniqueness so it's placed first by BGA's CSS cleaner";
-    font-size: 0;
+	font-size: 0;
 }
 /* Remove the wooden background */
 html {
@@ -34,7 +34,7 @@ body.game_interface {
 	padding-top: 62px;
 }
 .mobile_version #overall-content {
-    padding-top: 0;
+	padding-top: 0;
 }
 /* Make the mobile menu a little neater */
 #mobile-menu {
@@ -182,7 +182,7 @@ select {
 	margin: 0;
 }
 .row-data-form .third_width {
-    width: 81px !important;
+	width: 81px !important;
 }
 .dijitSelect {
 	border: 0 !important;
@@ -704,7 +704,7 @@ GAME PLAY PAGE - `game_interface`
 	background-color: transparent !important;
 }
 #player_boards .player_status {
-    right: 24px;
+	right: 24px;
 }
 .player-board .flag {
 	right: 4px;
