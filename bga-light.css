@@ -640,6 +640,9 @@ GAME PLAY PAGE - `game_interface`
 	background: #eaf0f8;
 	color: #385088;
 }
+#popin_tableWindow_contents {
+	font-size: 14px;
+}
 /* Game side logs */
 .game_interface .log {
 	background: #fff;
