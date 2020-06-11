@@ -36,6 +36,17 @@ body.game_interface {
 .mobile_version #overall-content {
 	padding-top: 0;
 }
+#mypreferences {
+	display: inline !important;
+}
+a.toprightmenu_item {
+	position: relative;
+	margin-right: 9px;
+	top: -4px;
+}
+a.toprightmenu_item:last-child {
+	margin-right: 14px;
+}
 /* Make the mobile menu a little neater */
 #mobile-menu {
 	right: 1.5%;
@@ -53,6 +64,40 @@ body.game_interface {
 .notouch-device .mobile-menu-item:hover {
 	background-color: #f1f1f1;
 	color: #000 !important;
+}
+.mobile_version #toprightmenu {
+	right: 45px;
+}
+.mobile_version #mobile-menu-icon {
+	display: block;
+	width: 40px;
+	left: auto;
+	right: 0;
+	top: 2px;
+}
+.mobile-menu-icon-button {
+	font-size: 0;
+}
+.mobile-menu-icon-button i {
+	font-size: 28px;
+}
+.mobile_version #toggleSound, 
+.mobile_version #mypreferences, 
+.mobile_version #mygameinprogress {
+    display: inline;
+}
+#menu_label {
+	display: none;
+}
+#toprightmenu #mygameinprogress {
+    position: static;
+    width: auto;
+    height: auto;
+}
+#toprightmenu #mygameinprogress .icon20 {
+	position: static;
+	top: auto;
+	left: auto;
 }
 /* Make the avatar pictures slightly neater */
 .emblem {
