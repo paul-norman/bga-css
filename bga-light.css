@@ -1,3 +1,7 @@
+/*
+TODO: 
+Grey / white buttons on blue bar in play area
+*/
 /******************************************
 GENERAL STYLES
 *******************************************/
@@ -661,6 +665,96 @@ PREFERENCES PAGE - `preferences-module`
 }
 .extended_message_hidden::after {
 	background: #fff;
+}
+/******************************************
+CHAT SYSTEM - `chatbar` 
+*******************************************/
+#chatbar .chatwindow .dropshadow {
+	display: none;
+}
+#chatbar .chatwindowcollapsed {
+	background: #eaf0f8;
+	border-color: #dbdbdb;
+	box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.5);
+}
+#chatbar .chatwindowcollapsedtitle {
+	color: #385088;
+}
+#chatbar .chatwindowexpanded {
+	top: -64px;
+	height: 100px;
+	background: #fff;
+	border-color: #dbdbdb;
+}
+#chatbar .chatinput {
+	height: 31px;
+}
+#chatbar .chatbarbelowinput {
+	top: 50px !important;
+}
+#chatbar .chatwindowlogs {
+	background: #fff;
+	border-color: #dbdbdb;
+	width: calc(100% + 2px);
+}
+#chatbar .chatwindowlogstitlebar {
+	background: #eaf0f8;
+	border-bottom: 1px solid #dbdbdb;
+}
+#chatbar .chatwindowicon .fa-comment, 
+#chatbar .chatwindowicon .fa-comments,
+#chatbar .chatwindowlogstitle, 
+#chatbar a.chatwindowtitlelink {
+	color: #385088;
+}
+#chatbar a.chatwindowtitlelink:hover {
+	color: #199c97;
+}
+#chatbar .chatwindowlogs_zone .chatlog {
+	background: #f4f4f4 !important;
+}
+#chatbar .chatwindowlogs_zone .chatlog:nth-child(odd) {
+	background: #fff !important;
+}
+#chatbar .chatwindowlogs_zone .ownchatlog {
+	background: #eaf0f8 !important;
+}
+#chatbar .chatwindowlogs_zone .ownchatlog:nth-child(odd) {
+	background: #f5f9fe !important;
+}
+#chatbar .chatwindowcollapse {
+	right: 27px;
+}
+#chatbar .chatwindowremove, 
+#chatbar .chatwindowremovec,
+#chatbar .chatwindowcollapse {
+	background: #385088;
+	border-radius: 10px;
+}
+#chatbar .chatwindowremove:hover, 
+#chatbar .chatwindowremovec:hover,
+#chatbar .chatwindowcollapse:hover {
+	background: #199c97;
+}
+#chatbar .chatwindowremove::after,
+#chatbar .chatwindowremovec::after,
+#chatbar .chatwindowcollapse::after {
+	content: '-';
+	line-height: 20px;
+	color: white;
+	position: absolute;
+	top: -3px;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	font-size: 25px;
+	font-weight: bold;
+}
+#chatbar .chatwindowremove::after,
+#chatbar .chatwindowremovec::after {
+	content: '⨯';
+	top: -2px;
 }
 /******************************************
 GAME PLAY PAGE - `game_interface`
