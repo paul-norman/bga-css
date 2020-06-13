@@ -11,9 +11,13 @@ GENERAL STYLES
 	box-sizing: content-box;
 }
 /* No need to see this if there's whitespace in it! */
-.clear {
+.clear,
+.clear > br {
 	content: "Ignored, and included for uniqueness so it's placed first by BGA's CSS cleaner";
 	font-size: 0;
+}
+.clear > * {
+	font-size: 14px;
 }
 /* Remove the wooden background */
 html {
@@ -531,24 +535,24 @@ NEWS PAGE - `headlines-module`
 /******************************************
 GAME LIST PAGE - `gamelist-module` 
 *******************************************/
-.desktop_version #gamelistpageheader .col-md-2 {
+.desktop_version #gamelist-module #gamelistpageheader .col-md-2 {
 	width: 20%;
 	margin: 0;
 	padding-right: 5px;
 }
-#gamelistpageheader .row-data {
+#gamelist-module #gamelistpageheader .row-data {
 	font-size: 0;
 }
-#gamelistpageheader .row-data > div {
+#gamelist-module #gamelistpageheader .row-data > div {
 	font-size: 14px;
 }
-#col_filter_more_filter > div {
+#gamelist-module #col_filter_more_filter > div {
 	margin-top: 26px !important;
 }
-.mobile_version #col_filter_more_filter > div {
+.mobile_version #gamelist-module #col_filter_more_filter > div {
 	margin-top: 0 !important;
 }
-#gamelist_gameselect_popup {
+#gamelist-module #gamelist_gameselect_popup {
 	background-color: #fff;
 	border: 1px solid #dbdbdb;
 }
@@ -621,6 +625,33 @@ COMMUNITY PAGE - `community-module`
 GAMES IN PROGRESS - `gameinprogress-module` 
 *******************************************/
 
+/******************************************
+TOURNAMENT LIST - `tournamentlist-module` 
+*******************************************/
+#tournamentlist-module #pageheader_menu > #lobby_invite_friend_zone, 
+#tournamentlist-module #pageheader_menu > div.clear {
+	display: none;
+}
+#tournamentlist-module .tournament_register {
+    background-color: #f1f1f1;
+	box-shadow: 0 4px 3px -3px rgba(0, 0, 0, 0.5);
+	padding: 10px 10px 25px 10px;
+}
+.notouch-device #tournamentlist-module .tournament:hover,
+.notouch-device #competition-module .tournament:hover {
+	margin: 0;
+    background-color: #e1e1e1;
+	border: 1px solid #cbcbcb !important;
+}
+#tournamentlist-module .tournament_info_subdetails {
+    bottom: 10px;
+}
+#tournamentlist-module #col_filter_more_filter {
+	position: relative;
+}
+#tournamentlist-module #col_filter_more_filter > span {
+	margin-top: 36px !important;
+}
 /******************************************
 PREFERENCES PAGE - `preferences-module` 
 *******************************************/
@@ -761,9 +792,9 @@ GAME PLAY PAGE - `game_interface`
 /* 
 **DEFAULT COLOURS**: ffffff, 7b7b7b, ff0000, f07f16, ffa500, bdd002, 008000, 72c3b1, 0000ff, 982fff, e94190 
 **SUPPORTED**: 6 Nimmt, 7 Wonders, Potion Explosion, Stone Age, Rallyman GT, Kingdomino, Terra Mystica, Hanabi, Sushi Go!, Puerto Rico, Seasons, Takenoko, Jaipur, Incan Gold, The King's Guild, Race for the Galaxy, Roll for the Galaxy, Through the Ages, Red7, Tzolk'in, Tobago, For Sale, Tash-Kalar, Coup, Tokaido, Saboteur, Colt Express, Barbu, Dice Forge, Connect Four, Siam, Logger, Dragonheart, Mammalath, French Tarot, Sapians, La Granga, Caylus, Keyflower, Amyitis, Targi, Clans of Caledonia, Yahtzee, Love Letter, Lost Cities, Tock, Teotihuacan: City of Gods, Backgammon, Bubblee Pop, Lords of Xidit, Elfenland, Assyria, Khronos, Innovation, Lewis & Clark, Taluva, Battle Sheep, Quantum, Russian Railroads, Eminent Domain, Not Alone, Nippon, NXS, Legendary Inventors, GORami, Skat, Palace, Oh Hell!
-**MISSING**: Can't Stop, Carcassonne, Solo
+**MISSING**: Can't Stop, Carcassonne, Solo (spectating these games doesn't load)
 **UNKOWN**: Celestia
-**CANNOT**: Dark Agent (design), Saint Poker (missing colour), The Werewolves of Miller's Hollow (many colours too similar)
+**CANNOT**: Dark Agent (design), Saint Poker (missing colour), Terra Mystica (missing colour), The Werewolves of Miller's Hollow (many colours too similar)
 */
 
 /* Black */
