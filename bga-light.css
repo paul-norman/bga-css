@@ -11,7 +11,7 @@ GENERAL STYLES
 }
 /* But the actual game code probably doesn't want messing with
    It has events which require pixel precision and was likely designed to run using the defaults */
-#game_play_area * {
+#game_play_area_wrap * {
 	box-sizing: content-box;
 }
 /* No need to see this if there's whitespace in it! */
@@ -312,6 +312,7 @@ select {
 .bgabutton_darkgray:hover, 
 .bgabutton_darkgray:active {
 	background: #787878 !important;
+	color: #fff;
 }
 .bgabutton_blue {
 	background: #4065a3 !important;
@@ -321,15 +322,20 @@ select {
 .bgabutton_blue:hover, 
 .bgabutton_blue:active {
 	background: #4871b6 !important;
+	color: #fff;
 }
+.bgabutton[id^="expected_refuse_"],
 .bgabutton_red {
 	background: #c20b0b !important;
 	border: 1px solid #b20a0a !important;
 	color: #fff;
 }
+.bgabutton[id^="expected_refuse_"]:hover,
+.bgabutton[id^="expected_refuse_"]:active,
 .bgabutton_red:hover, 
 .bgabutton_red:active {
 	background: #c92727 !important;
+	color: #fff;
 }
 .bgabutton_green {
 	background: #40a349 !important;
@@ -339,6 +345,7 @@ select {
 .bgabutton_green:hover, 
 .bgabutton_green:active {
 	background: #31983a !important;
+	color: #fff;
 }
 /* Pageheader menus */
 .pageheader {
@@ -458,6 +465,9 @@ LOBBY PAGE - `gamelobby-module`
 	width: 100%;
 	height: 100%;
 }
+.wannaplay_mask_button {
+	margin-bottom: 2px;
+}
 .expandedgame_box_wrap {
 	width: 100%;
 }
@@ -476,7 +486,7 @@ LOBBY PAGE - `gamelobby-module`
 	margin-top: 8px;
 }
 .gametable_button_zone {
-	margin-top: 2px;
+	margin-top: 2px !important;
 }
 /* Fix the expanding button */
 .tabbed_slider_bar {
@@ -656,6 +666,25 @@ TOURNAMENT LIST - `tournamentlist-module`
 #tournamentlist-module #col_filter_more_filter > span {
 	margin-top: 36px !important;
 }
+.mobile_version #tournamentlist-module #filter_text {
+	width: 90% !important;
+}
+.desktop_version #tournamentlist-module #filter_text {
+	width: 71% !important;
+}
+#tournamentlist-module #filter_text_btn {
+	margin: 0;
+}
+.mobile_version #tournamentlist-module #filter_text_btn, 
+.desktop_version #tournamentlist-module #filter_text_btn {
+	display: inline-block !important;
+	width: 25%;
+	text-align: center;
+	padding: 6px 0;
+}
+.mobile_version #tournamentlist-module #filter_text_btn {
+	width: 9%;
+}
 /******************************************
 PREFERENCES PAGE - `preferences-module` 
 *******************************************/
@@ -779,6 +808,10 @@ GAME PLAY PAGE - `game_interface`
 	padding: 5px;
 	display: block !important;
 	width: 100% !important;
+}
+.current_player_is_active #page-title .bgabutton_grey, 
+.current_player_is_active #page-title .bgabutton_gray {
+	border: 1px solid #bbb !important;
 }
 /* Tame the L/R menu */
 .game_interface #leftright_page_wrapper {
