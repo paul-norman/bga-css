@@ -739,9 +739,11 @@ CHAT SYSTEM - `chatbar`
 #chatbar a.chatwindowtitlelink:hover {
 	color: #199c97;
 }
+#chatbar .chatwindowlogs_zone .log,
 #chatbar .chatwindowlogs_zone .chatlog {
 	background: #f4f4f4 !important;
 }
+#chatbar .chatwindowlogs_zone .log:nth-child(odd),
 #chatbar .chatwindowlogs_zone .chatlog:nth-child(odd) {
 	background: #fff !important;
 }
@@ -784,6 +786,10 @@ CHAT SYSTEM - `chatbar`
 #chatbar .chatwindowremovec::after {
 	content: '⨯';
 	top: -2px;
+}
+#chatbar .chatwindownewmsgcount {
+	border-radius: 8px;
+	color: #fff;
 }
 /******************************************
 GAME PLAY PAGE - `game_interface`
@@ -914,6 +920,11 @@ GAME PLAY PAGE - `game_interface`
 }
 .player-board .flag {
 	right: 4px;
+}
+
+/* Seasons Fix */
+.whiteblock.tableau {
+	background: #ddd;
 }
 
 /* 
