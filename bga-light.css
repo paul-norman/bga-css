@@ -347,11 +347,14 @@ select {
 	background: #c92727 !important;
 	color: #fff;
 }
+#access_game_normal, 
 .bgabutton_green {
 	background: #40a349 !important;
 	border: 1px solid #378c3f !important;
 	color: #fff;
 }
+#access_game_normal:hover, 
+#access_game_normal:active, 
 .bgabutton_green:hover, 
 .bgabutton_green:active {
 	background: #31983a !important;
