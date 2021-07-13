@@ -761,6 +761,9 @@ CHAT SYSTEM - `chatbar`
 	font-size: 12px !important;
 	min-height: 48px;
 }
+.desktop_version #chatbar .chatwindowtype_table .chatinput {
+	width: 376px;
+}
 #chatbar .chatbarbelowinput {
 	top: 70px !important;
 }
@@ -769,6 +772,9 @@ CHAT SYSTEM - `chatbar`
 	border-color: #dbdbdb;
 	width: 268px; /* Should be: calc(100% + 2px); but the BGA screws this up upon save... */
 	left: 0;
+}
+.desktop_version #chatbar .chatwindowtype_table .chatwindowlogs {
+	width: 100%;
 }
 #chatbar .chatwindowlogstitlebar {
 	background: #eaf0f8;
