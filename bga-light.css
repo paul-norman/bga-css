@@ -546,6 +546,32 @@ LOBBY PAGE - `gamelobby-module`
 .icon_plus span {
 	line-height: 23px;
 }
+/* Put the game search first and suggestions firmly last */
+.desktop_version #gamelobby-module #gamelobby_inner {
+	display: flex;
+	flex-wrap: wrap;
+}
+.desktop_version #gamelobby-module #gamelobby_inner > * {
+	flex: 0 0 100%;
+}
+.desktop_version #gamelobby-module #gamelobby_inner > #lobby_tutorial_overlay {
+	flex: none;
+}
+.desktop_version #gamelobby-module #gamelobby_inner > div:nth-child(1) {
+	order: 2;
+}
+.desktop_version #gamelobby-module #gamelobby_inner > #find_a_game {
+	order: 1;
+}
+.desktop_version #gamelobby-module #gamelobby_inner > div:nth-child(3) {
+	order: 5;
+}
+.desktop_version #gamelobby-module #gamelobby_inner > #known_section {
+	order: 3;
+}
+.desktop_version #gamelobby-module #gamelobby_inner > #all_games_tables {
+	order: 4;
+}
 /******************************************
 TABLE PAGE  - `table-module` 
 *******************************************/
