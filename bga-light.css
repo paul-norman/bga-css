@@ -36,9 +36,7 @@ html {
 	background: #fff;
 	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
 }
-body {
-	padding-top: 43px;
-}
+
 body.game_interface {
 	padding-top: 62px;
 }
@@ -174,15 +172,27 @@ a.toprightmenu_item:last-child {
 	border-radius: 6px;
 	border: 1px solid #dbdbdb;
 	font-size: 14px;
+	padding-top: 0;
 }
+.statstable th {
+	color: #385088;
+	border-radius: 0 !important;
+	padding: 8px 2px !important;
+}
+.statstable th,
 .pagesection h3,
-.portlet h3,
 .pagesection h2,
+.portlet h3,
 .portlet h2 {
 	background: #eaf0f8;
 	border-radius: 6px 6px 0 0;
 	box-shadow: none;
 	border-bottom: 1px solid #dbdbdb;
+	margin-top: 0;
+	padding: 0.6rem 1rem;
+}
+.pagesection__content {
+	background: #fff;
 }
 .pubbanner, 
 #footercol_follow {
@@ -205,7 +215,8 @@ input[type=search],
 input[type=email], 
 input[type=tel], 
 input[type=password],
-.dijitInputField {
+.dijitInputField, 
+#gamelist_gameselect input {
 	border: 1px solid #dbdbdb !important;
 	margin: 0 !important;
 	padding: 7px 10px !important;
@@ -234,6 +245,9 @@ input[type=password]:focus {
 }
 select {
 	padding: 6px 10px !important;
+}
+.bga-game-selector {
+	border: 0;
 }
 .bga_big_input {
 	border: 1px solid #dbdbdb;
